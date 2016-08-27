@@ -38,31 +38,31 @@ namespace SimdGeneration
         [Benchmark(Baseline = true)]
         public System.Numerics.Vector4 Numerics()
         {
-            return a0 * a1 * a0 * a1 * a0 * a1 * a0 * a1 * a0 * a1 * a0 * a1;
+            return a0 * a1 * a0 * a1 * a0 * a1 * a0 * a1 * a0 * a1 * a0 * a1 * a0 * a1 * a0 * a1 * a0 * a1 * a0 * a1 * a0 * a1 * a0 * a1;
         }
 
         [Benchmark]
         public Test1.Vector4 Test1()
         {
-            return b0 * b1 * b0 * b1 * b0 * b1 * b0 * b1 * b0 * b1 * b0 * b1;
+            return b0 * b1 * b0 * b1 * b0 * b1 * b0 * b1 * b0 * b1 * b0 * b1 * b0 * b1 * b0 * b1 * b0 * b1 * b0 * b1 * b0 * b1 * b0 * b1;
         }
 
         [Benchmark]
         public Test2.Vector4 Test2()
         {
-            return c0 * c1 * c0 * c1 * c0 * c1 * c0 * c1 * c0 * c1 * c0 * c1;
+            return c0 * c1 * c0 * c1 * c0 * c1 * c0 * c1 * c0 * c1 * c0 * c1 * c0 * c1 * c0 * c1 * c0 * c1 * c0 * c1 * c0 * c1 * c0 * c1;
         }
 
         [Benchmark]
         public Test3.Vector4 Test3()
         {
-            return d0 * d1 * d0 * d1 * d0 * d1 * d0 * d1 * d0 * d1 * d0 * d1;
+            return d0 * d1 * d0 * d1 * d0 * d1 * d0 * d1 * d0 * d1 * d0 * d1 * d0 * d1 * d0 * d1 * d0 * d1 * d0 * d1 * d0 * d1 * d0 * d1;
         }
 
         [Benchmark]
         public Test4.Vector4 Test4()
         {
-            return e0 * e1 * e0 * e1 * e0 * e1 * e0 * e1 * e0 * e1 * e0 * e1;
+            return e0 * e1 * e0 * e1 * e0 * e1 * e0 * e1 * e0 * e1 * e0 * e1 * e0 * e1 * e0 * e1 * e0 * e1 * e0 * e1 * e0 * e1 * e0 * e1;
         }
     }
 }
