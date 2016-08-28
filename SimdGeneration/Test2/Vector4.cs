@@ -1,4 +1,5 @@
 ﻿#region Using Statements
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 #endregion
 
@@ -72,6 +73,7 @@ namespace Test2
         /// <returns>
         /// The result of the operator.
         /// </returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector4 operator *(Vector4 value1, Vector4 value2)
         {
             Vector4 vector;

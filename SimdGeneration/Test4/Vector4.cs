@@ -81,6 +81,7 @@ namespace Test4
         /// <returns>
         /// The result of the operator.
         /// </returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector4 operator *(Vector4 value1, Vector4 value2)
         {
             Vector4 result = default(Vector4);
