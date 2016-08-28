@@ -1,0 +1,38 @@
+var a0 = new System.Numerics.Vector4(2, 3, 4, 5);
+var a1 = new System.Numerics.Vector4(5, 6, 3, 7);
+
+var a2 = a0 * a1;
+
+
+C:\Users\javie\Documents\RyuJITSIMD\SimdGeneration\Program.cs @ 21:
+00007ffc`10890480 4883ec38        sub     rsp,38h
+00007ffc`10890484 0f29742420      movaps  xmmword ptr [rsp+20h],xmm6
+00007ffc`10890489 f30f1005a7000000 movss   xmm0,dword ptr [00007ffc`10890538]
+00007ffc`10890491 f30f100da3000000 movss   xmm1,dword ptr [00007ffc`1089053c]
+00007ffc`10890499 f30f10159f000000 movss   xmm2,dword ptr [00007ffc`10890540]
+00007ffc`108904a1 f30f101d9b000000 movss   xmm3,dword ptr [00007ffc`10890544]
+00007ffc`108904a9 f30f10e3        movss   xmm4,xmm3
+00007ffc`108904ad 660f73fc04      pslldq  xmm4,4
+00007ffc`108904b2 f30f10e2        movss   xmm4,xmm2
+00007ffc`108904b6 660f73fc04      pslldq  xmm4,4
+00007ffc`108904bb f30f10e1        movss   xmm4,xmm1
+00007ffc`108904bf 660f73fc04      pslldq  xmm4,4
+00007ffc`108904c4 f30f10e0        movss   xmm4,xmm0
+00007ffc`108904c8 0f28c4          movaps  xmm0,xmm4
+
+C:\Users\javie\Documents\RyuJITSIMD\SimdGeneration\Program.cs @ 22:
+00007ffc`108904cb f30f100d75000000 movss   xmm1,dword ptr [00007ffc`10890548]
+00007ffc`108904d3 f30f101571000000 movss   xmm2,dword ptr [00007ffc`1089054c]
+00007ffc`108904db f30f10256d000000 movss   xmm4,dword ptr [00007ffc`10890550]
+00007ffc`108904e3 f30f10ec        movss   xmm5,xmm4
+00007ffc`108904e7 660f73fd04      pslldq  xmm5,4
+00007ffc`108904ec f30f10ea        movss   xmm5,xmm2
+00007ffc`108904f0 660f73fd04      pslldq  xmm5,4
+00007ffc`108904f5 f30f10e9        movss   xmm5,xmm1
+00007ffc`108904f9 660f73fd04      pslldq  xmm5,4
+00007ffc`108904fe f30f10eb        movss   xmm5,xmm3
+00007ffc`10890502 0f28cd          movaps  xmm1,xmm5
+
+C:\Users\javie\Documents\RyuJITSIMD\SimdGeneration\Program.cs @ 24:
+00007ffc`10890505 0f59c1          mulps   xmm0,xmm1
+00007ffc`10890508 0f28f0          movaps  xmm6,xmm0

@@ -1,0 +1,42 @@
+var a0 = new Test3.Vector4(2, 3, 4, 5);
+var a1 = new Test3.Vector4(5, 6, 3, 7);
+
+var a2 = a0 * a1;
+
+
+C:\Users\javie\Documents\RyuJITSIMD\SimdGeneration\Program.cs @ 21:
+00007ffc`108b0480 4883ec38        sub     rsp,38h
+00007ffc`108b0484 33c0            xor     eax,eax
+00007ffc`108b0486 4889442408      mov     qword ptr [rsp+8],rax
+00007ffc`108b048b 4889442410      mov     qword ptr [rsp+10h],rax
+00007ffc`108b0490 f30f100588000000 movss   xmm0,dword ptr [00007ffc`108b0520]
+00007ffc`108b0498 f30f100d84000000 movss   xmm1,dword ptr [00007ffc`108b0524]
+
+C:\Users\javie\Documents\RyuJITSIMD\SimdGeneration\Program.cs @ 22:
+00007ffc`108b04a0 f30f101580000000 movss   xmm2,dword ptr [00007ffc`108b0528]
+00007ffc`108b04a8 f30f101d7c000000 movss   xmm3,dword ptr [00007ffc`108b052c]
+00007ffc`108b04b0 f30f102578000000 movss   xmm4,dword ptr [00007ffc`108b0530]
+00007ffc`108b04b8 f30f102d74000000 movss   xmm5,dword ptr [00007ffc`108b0534]
+
+C:\Users\javie\Documents\RyuJITSIMD\SimdGeneration\Program.cs @ 24:
+00007ffc`108b04c0 488d442428      lea     rax,[rsp+28h]
+00007ffc`108b04c5 f30f1100        movss   dword ptr [rax],xmm0
+00007ffc`108b04c9 f30f116004      movss   dword ptr [rax+4],xmm4
+00007ffc`108b04ce f30f114808      movss   dword ptr [rax+8],xmm1
+00007ffc`108b04d3 f30f11500c      movss   dword ptr [rax+0Ch],xmm2
+00007ffc`108b04d8 488d442418      lea     rax,[rsp+18h]
+00007ffc`108b04dd f30f1110        movss   dword ptr [rax],xmm2
+00007ffc`108b04e1 f30f115804      movss   dword ptr [rax+4],xmm3
+00007ffc`108b04e6 f30f116008      movss   dword ptr [rax+8],xmm4
+00007ffc`108b04eb f30f11680c      movss   dword ptr [rax+0Ch],xmm5
+00007ffc`108b04f0 33c0            xor     eax,eax
+00007ffc`108b04f2 488d542408      lea     rdx,[rsp+8]
+00007ffc`108b04f7 660f57c0        xorpd   xmm0,xmm0
+00007ffc`108b04fb f30f7f02        movdqu  xmmword ptr [rdx],xmm0
+00007ffc`108b04ff 488d442428      lea     rax,[rsp+28h]
+00007ffc`108b0504 0f1000          movups  xmm0,xmmword ptr [rax]
+00007ffc`108b0507 488d442418      lea     rax,[rsp+18h]
+00007ffc`108b050c 0f1008          movups  xmm1,xmmword ptr [rax]
+00007ffc`108b050f 0f59c1          mulps   xmm0,xmm1
+00007ffc`108b0512 488d442408      lea     rax,[rsp+8]
+00007ffc`108b0517 0f1100          movups  xmmword ptr [rax],xmm0
